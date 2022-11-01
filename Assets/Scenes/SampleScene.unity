@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 437376960020420909, guid: a7634ed7883a336459a380584fc526bf, type: 3}
-  amountToCreate: {x: 8, y: 7}
-  spacing: 0.35
+  amountToCreate: {x: 10, y: 5}
+  spacing: 0.72
 --- !u!1 &194802926
 GameObject:
   m_ObjectHideFlags: 0

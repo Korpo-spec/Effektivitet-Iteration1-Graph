@@ -14,6 +14,7 @@ public class BallManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float timebegining = Time.realtimeSinceStartup;
         float startposX = (spacing * amountToCreate.x) /2 - spacing/2;
         float startposY = (spacing * amountToCreate.y) / 2 - spacing/2;
         for (int i = 0; i < amountToCreate.y; i++)
@@ -23,10 +24,12 @@ public class BallManager : MonoBehaviour
                 Instantiate(ball, new Vector3(-startposX +j * spacing, -startposY + i * spacing, 0), quaternion.identity);
             }
         }
+        Debug.Log(Time.realtimeSinceStartup - timebegining);
     }
-
-    private void OnDrawGizmos()
+    
+    private void OnDrawGizmosSelected()
     {
+        
         float startposX = (spacing * amountToCreate.x) /2 - spacing/2;
         float startposY = (spacing * amountToCreate.y) /2 - spacing/2;
         for (int i = 0; i < amountToCreate.y; i++)
